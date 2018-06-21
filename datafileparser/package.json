@@ -1,0 +1,16 @@
+{
+  "name": "datafileparser",
+  "version": "1.0.0",
+  "description": "Convert TSV or CSV files to JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samuli Aura",
+  "license": "ISC",
+  "dependencies": {
+    "JSONStream": "^1.3.3",
+    "csv-streamify": "^4.0.0",
+    "underscore": "^1.9.1"
+  }
+}

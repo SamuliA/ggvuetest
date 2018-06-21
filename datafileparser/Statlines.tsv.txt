@@ -1,0 +1,18 @@
+#head	faction	chassis	name	tv	ua	mr	ar	hs	a	gu	pi	ew	weapons	traits	type	special
+#labels	Faction	Chassis	Model	TV	UA	MR	AR	H/S	A	GU	PI	EW	Weapons	Traits	Type/Height	Special Rules
+#types	str	str	str	i	array(str,',')	array(str,' ')	i	array(i,'/')	str	str	str	array(str,',')	array(str,',')	str
+#sort	-	-	-	-	0	-	-	-	-	-	-	-	-	-	1	1	-	1
+#line	NORTH	Hunter	Hunter	6	GP(0+), FS, ST, HT	W:5" G:6"	6	4 / 2	1	4+	4+	6+	LAC (Arm), LRP, APGL, LPZ, LVB (Arm)	Arms	Gear 1.5"
+#line	NORTH	Hunter	Hunter Gunner	7	GP, SK, FS	W:5" G:6"	6	4 / 2	1	4+	4+	6+	MAC (Arm), LRP, APGL, LVB (Arm)	Arms	Gear 1.5"
+#line	NORTH	Hunter	Destroyer Hunter	8	FS	W:5" G:6"	6	4 / 2	1	4+	4+	6+	MBZ (Arm), LRP, APGL, LVB (Arm)	Arms	Gear 1.5"
+#mod{chassis:'Hunter'}	NORTH	Hunter	#replace:{from:'Hunter', to: 'Headhunter'}	+1	+(CMD)	-	-	-	-	-	-	5+	-	+Comms:1
+#line	NORTH	Jaguar	Jaguar	10	SK (0+), FS, RC, PT	W:6" G:7"	6	3 / 3	1	3+	3+	5+	MAC (Arm), LRP, APGL, LVB (Arm)	Agile, Arms, Airdrop	Gear 1.5"
+#line	NORTH	Jaguar	Fire Jaguar	11	SK, PT	W:6" G:7"	6	3 / 3	1	3+	3+	5+	MAC (Arm), MRP (Link), LVB (Arm)	Agile, Arms, Airdrop	Gear 1.5"
+#mod{chassis:'Jaguar'}	NORTH	Jaguar	#prefix:'Thunder'	+1	+(CMD)	-	-	-	-	-	-	4+	-	+SatUp:6+ (Aux)
+#mod{chassis:'Man at Arms Golem'}	Eden	Man at Arms APE	#replace:{from:'Golem', to:'APE'}	+2	SK	-	-	-	-	-	-	-	-	+Stealth, Support
+#line	Generic	Generic Fighter	Generic Fighter	8	GF (0-3)	F:14" G:2"	6	2 / 4	2	5+	3+	6+	2xMAC, LSAM (LA:2)	Agile, TD:0	Flyer	NoGenericUpgrades
+#line	Generic	Generic Fighter-Bomber	Generic Fighter-Bomber	15	FB (0-3)	F:12" G:2"	6	3 / 3	2	5+	3+	6+	2xHAC, LSAM (LA:2), HRP	Agile, TD:0	Flyer	NoGenericUpgrades
+#line	Generic	Generic Bomber	Generic Bomber	20	GB	F:10" G:2"	7	4 / 4	3	4+	4+	5+	LRC (FT), MSAM (LA:2), 2xMBB (LA:2)		Flyer	NoGenericUpgrades
+#line	Generic	Recon UAV	Recon UAV	12	UV	F:12" G:2"	4	2 / 2	1	5+	5+	4+	LATM (LA:2)	TD:1, Sensors:24"	Flyer	NoGenericUpgrades
+#line	Generic	Drone	Hunter Killer Air Defense	1	Attached upgrade	H:6"	1	2 / 0	1	5+	4+	-	MIW (FT, AA)	JumpJets:2	Drone 0.5"	Drone
+#line	Option		 + Combat Group Leader	0										Init Skill:5+, CPs:1, CGL	Option
