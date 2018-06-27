@@ -13,7 +13,7 @@ class ArrToObjTransform extends Transform {
 ArrToObjTransform.prototype._transform = function(chunk, encoding, done) {
     var obj = {};
     //console.log( chunk );
-    if (chunk[0] == "#head") {
+    if (!this.header) {
     	//console.log( 'HEADER FOUND: ' + chunk );
         this.header = chunk;
     } else {

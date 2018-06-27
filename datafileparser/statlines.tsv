@@ -1,8 +1,7 @@
-#head	faction	chassis	name	tv	ua	mr	ar	hs	a	gu	pi	ew	weapons	traits	type	special
+linetype	faction	chassis	name	tv	ua	mr	ar	hs	a	gu	pi	ew	weapons	traits	type	special
 #labels	Faction	Chassis	Model	TV	UA	MR	AR	H/S	A	GU	PI	EW	Weapons	Traits	Type/Height	Special Rules
-#types	str	str	str	i	array(str,',')	array(str,' ')	i	array(i,'/')	str	str	str	array(str,',')	array(str,',')	str
+#types	str	str	str	i	array(str,',')	array(str,' ')	i	combo(/|hull:i|struct:i)	str	str	str	str	array(str,',')	array(str,',')	combo( |type:str|height:str:")
 #sort	-	-	-	-	0	-	-	-	-	-	-	-	-	-	1	1	-	1
-#line	NORTH	Hunter	Hunter	6	GP(0+), FS, ST, HT	W:5" G:6"	6	4 / 2	1	4+	4+	6+	LAC (Arm), LRP, APGL, LPZ, LVB (Arm)	Arms	Gear 1.5"
 #line	NORTH	Hunter	Hunter Gunner	7	GP, SK, FS	W:5" G:6"	6	4 / 2	1	4+	4+	6+	MAC (Arm), LRP, APGL, LVB (Arm)	Arms	Gear 1.5"
 #line	NORTH	Hunter	Destroyer Hunter	8	FS	W:5" G:6"	6	4 / 2	1	4+	4+	6+	MBZ (Arm), LRP, APGL, LVB (Arm)	Arms	Gear 1.5"
 #mod{chassis:'Hunter'}	NORTH	Hunter	#replace:{from:'Hunter', to: 'Headhunter'}	+1	+(CMD)	-	-	-	-	-	-	5+	-	+Comms:1
@@ -16,3 +15,4 @@
 #line	Generic	Recon UAV	Recon UAV	12	UV	F:12" G:2"	4	2 / 2	1	5+	5+	4+	LATM (LA:2)	TD:1, Sensors:24"	Flyer	NoGenericUpgrades
 #line	Generic	Drone	Hunter Killer Air Defense	1	Attached upgrade	H:6"	1	2 / 0	1	5+	4+	-	MIW (FT, AA)	JumpJets:2	Drone 0.5"	Drone
 #line	Option		 + Combat Group Leader	0										Init Skill:5+, CPs:1, CGL	Option
+#line	NORTH	Hunter	Hunter	6	GP(0+), FS, ST, HT	W:5" G:6"	6	4 / 2	1	4+	4+	6+	LAC (Arm), LRP, APGL, LPZ, LVB (Arm)	Arms	Gear 1.5"

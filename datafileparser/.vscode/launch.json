@@ -12,9 +12,18 @@
             
             "program": "${workspaceFolder}\\main.js",
             "args": [
-                "<< statlines.txt.tsv"
-            ], 
-            
+                "-i","statlines.tsv"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "yargstest",
+            "program": "${workspaceFolder}\\yargstest.js",
+            "args": [
+                "-i","foo.bar"
+            ]
+
         }
     ]
 }
